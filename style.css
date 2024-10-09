@@ -1,0 +1,182 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Special Elite', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F7FA; /* Hintergrundfarbe */
+    color: #333333; /* Alle Texte in Dunkelgrau */
+    line-height: 1.5; /* Zeilenabstand von 1,5 */
+    font-size: 18px; /* Größere Standardschriftgröße */
+    text-align: justify; /* Blocksatz für den gesamten Text */
+}
+
+/* Stil für das Logo */
+#logo, #logo-mobile {
+    width: 100%; /* Volle Breite für das Logo */
+    display: block; /* Standardmäßig anzeigen */
+}
+
+/* Stil für die Navigation */
+nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Abstand nach der Navigation */
+}
+
+nav a {
+    margin: 2px 10px;
+    text-decoration: none;
+    background-color: rgba(107, 132, 196, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
+    display: inline-block;
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+}
+
+nav a:hover {
+    background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
+}
+
+/* Stil für den Hauptinhalt */
+.content {
+    padding: 20px;
+    max-width: 75%; /* Maximale Breite des Inhalts */
+    margin: 0 auto; /* Zentrierung des Inhalts */
+}
+
+/* Stil für die Fußzeile */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px; /* Etwas Platz unter dem Impressumslink */
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: rgba(107, 132, 196, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
+}
+
+/* Container für Bild und Text */
+.image-text-container {
+    display: flex; /* Flexbox aktivieren */
+    align-items: center; /* Vertikale Ausrichtung in der Mitte */
+    /*justify-content: center;  Zentrieren des Inhalts  ALTERNATIV: left*/
+    width: 100%; /* Volle Breite */
+    margin: 40px auto; /* Abstand oben und unten zwischen den Containern */
+}
+
+.image-wrapper {
+    flex: 0 0 33%; /* 33% Breite auf größeren Bildschirmen */
+}
+
+.text-wrapper {
+    flex: 0 0 33%; /* 33% Breite auf größeren Bildschirmen */
+}
+
+/* Platzhalter für den leeren Raum */
+.spacerrand {
+    flex: 0 0 15%; /* 15% Breite */
+}
+
+.spacermitte {
+    flex: 0 0 4%; /* 4% Breite */
+}
+
+/* Stil für das Bild */
+.image-wrapper img {
+    width: 100%; /* Bild auf volle Breite setzen */
+    height: auto; /* Proportionalität des Bildes beibehalten */
+    border-radius: 5px; /* Abrundung der Ecken */
+    transition: transform 0.3s ease; /* Animationsübergang für den Hover-Effekt */
+}
+
+/* Hover-Effekt für das Bild */
+.image-wrapper img:hover {
+    transform: scale(1.05); /* Vergrößerung des Bildes um 5% beim Hover */
+}
+
+/* Stil für den Text */
+.text-wrapper {
+    padding: 20px; /* Innenabstand für den Text */
+    text-align: justify; /* Text im Blocksatz ausrichten */
+}
+
+/* Stil für den Namen des Produkts */
+.item-name {
+    font-size: 24px; /* Größere Schriftgröße für den Namen */
+    font-weight: bold; /* Fettgedruckt für mehr Sichtbarkeit */
+    margin: 10px 0; /* Abstand oberhalb und unterhalb */
+}
+
+/* Stil für den Preis */
+.item-price {
+    font-size: 20px; /* Größere Schriftgröße für den Preis */
+    color: #4169E1; /* Auffällige Farbe für den Preis */
+    margin: 10px 0; /* Abstand oberhalb und unterhalb */
+}
+
+/* Stil für Fakten */
+.item-facts {
+    font-size: 20px; /* Größere Schriftgröße */
+    margin: 10px 0; /* Abstand oberhalb und unterhalb */
+    list-style-type: none; /* Entfernt die Aufzählungspunkte */
+    padding-left: 0; /* Entfernt den Einzug */
+}
+
+.item-facts li {
+    margin-bottom: 5px; /* Optional: Abstand zwischen den Listenelementen */
+}
+
+
+/* Media Queries für mobile Geräte */
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 85%; /* Breite des Inhalts für kleinere Bildschirme */
+    }
+
+    nav a {
+        margin: 10px 0; /* Vertikaler Abstand für mobile Geräte */
+    }
+
+    #logo {
+        display: none; /* Desktop-Logo ausblenden auf mobilen Geräten */
+    }
+
+    #logo-mobile {
+        display: block; /* Mobile Logo anzeigen auf mobilen Geräten */
+        margin: 0 auto; /* Zentriert das Bild horizontal */
+    }
+
+    /* Container für Bild und Text auf 80% Breite */
+    .image-text-container {
+        flex-direction: column; /* Bild und Text untereinander */
+        width: 85%; /* Setze Container auf 80% der Bildschirmbreite */
+        margin: 0 auto; /* Zentriere den Container horizontal */
+    }
+
+    /* Bild und Text auf 100% Breite setzen */
+    .image-wrapper, .text-wrapper {
+        flex: 0 0 100%; /* Bild und Text auf 100% Breite setzen */
+        padding: 10px; /* Weniger Padding auf mobilen Geräten */
+    }
+
+    /* Schriftgröße für mobile Geräte anpassen */
+    body {
+        font-size: 16px; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+}
+
